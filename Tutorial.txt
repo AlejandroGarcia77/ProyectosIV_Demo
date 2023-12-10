@@ -1,0 +1,27 @@
+1. Instalar Terraform: https://developer.hashicorp.com/terraform/install?product_intent=terraform
+2. Instalar AWS CLI: https://aws.amazon.com/es/cli/
+3. Configurar entorno AWS:
+	3.1 Crear usuario para terraform
+	3.2 Crear grupo para el usuario:
+		3.2.1 Conceder permisos sobre EC2,S3,DynamoDB,Route53,IAM y RDS
+	3.3 Generar una clave de acesso para el AWS CLI
+	3.4 desde nuestro directorio de cofiguración ejecutar:
+		3.4.1 aws configure
+		3.4.2 introducir el identificador de la clave del CLI
+		3.4.3 introducir la clave del CLI
+		3.4.4 elegir la region del servidor de AWS
+		3.4.5 elegir el formato de archivo: JSON
+4. Ejecutar terraform
+	4.1 nos situamos en la ubicación de nuestro código .tf
+	4.2 ejecutamos: terraform init.
+	4.3 esto nos genera un backend ubicado en la carpeta .terraform
+	4.4 ejecutamos: terraform plan.
+	4.5 esto nos generará una instancia con los detalles especificados en el fichero.
+	4.6 ejecutamos: terraform apply.
+	4.7 con esto confirmamos los datos obtenidos en el plan y procederá a crear la instancia.
+	4.8 ejecutamos: terraform destroy.
+	4.9 esto elimina la instancia creada anteriormente.
+	
+
+
+Repo de Github: https://github.com/sidpalas/devops-directive-terraform-course
